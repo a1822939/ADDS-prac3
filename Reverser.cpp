@@ -22,7 +22,9 @@ std::string Reverser::reverseString(std::string characters)
     if(characters.length()==1){
         return characters;
     }
+    char lastCharacter = characters.back();
+    
+    characters.pop_back();
 
-
-    return ;
+    return lastCharacter+reverseString(characters);
 }
